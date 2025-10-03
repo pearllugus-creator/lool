@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Blog Culinario</title>
+  <link rel="stylesheet" href="estilos.css">
+  <!-- Fuentes de Google -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+  <!-- Font Awesome para iconos -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body> 
+  <!-- encabezado -->
+  <header>
+    <div class="encabezado">
+      <div class="logo">
+        <h1 style="font-size: 2.5rem;"> 👩‍🍳Mi Blog Culinario🍳 </h1>
+        <p>Recetas caseras con amor</p>
+      </div>
+      <nav class="navegacion">
+        <button class="hamburger" id="hamburgerMenu" aria-label="Abrir menú">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul class="menu-list" id="menuList">
+          <li><a href="#inicio" class="menu-item">Inicio</a></li>
+          <li><a href="#recetas" class="menu-item">Recetas</a></li>
+          <li><a href="#categorias" class="menu-item">Categorías</a></li>
+          <li><a href="#sobre-mi" class="menu-item">Sobre Mí</a></li>
+          <li><a href="#contacto" class="menu-item">Contacto</a></li>
+        </ul>
+        <button class="theme-toggle" id="themeToggle" aria-label="Cambiar modo oscuro/claro">
+          <i class="fas fa-moon"></i>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main">
+    <!-- HERO SECTION -->
+    <section id="inicio" class="hero">
+      <div class="hero-content">
+        <h1>Bienvenido a mi blog culinario!</h1>
+        <p>Recetas tradicionales de postres deliciosos y faciles de hacer</p>
+        <a href="#recetas" class="cta-button">Explorar Recetas</a>
+      </div>
+    </section>
+
+    <!-- RECETAS DESTACADAS -->
+    <section id="recetas" class="featured-recipes">
+      <h2>Recetas Destacadas</h2>
+      <div class="recipes-grid">
+        <article class="recipe-card">
+          <div class="recipe-image">
+            <img src="imagenes/flan.jpg" alt="Flan Napolitano">
+            <span class="recipe-badge popular">Popular</span>
+          </div>
+          <div class="recipe-content">
+            <h3>Flan Napolitano</h3>
+            <p>Una receta de la abuela, facil y para cualquier tipo de paladar.</p>
+            <div class="recipe-meta">
+              <span><i class="far fa-clock"></i> 2 horas</span>
+              <span><i class="fas fa-signal"></i> Facil</span>
+              <span><i class="fas fa-user-friends"></i> 8 personas</span>
+            </div>
+            <a href="flan.html" class="recipe-button">Ver Receta</a>
+          </div>
+        </article>
+        
+        <article class="recipe-card">
+          <div class="recipe-image">
+            <img src="imagenes/manzanitaa.jpg" alt="Ensalada De Manzana">
+            <span class="recipe-badge picante">Dulce</span>
+          </div>
+          <div class="recipe-content">
+            <h3>Ensalada de Manzana</h3>
+            <p>Receta tradicional navideña, pero delisiosa para cualquier ocasion.</p>
+            <div class="recipe-meta">
+              <span><i class="far fa-clock"></i> 1 hora</span>
+              <span><i class="fas fa-signal"></i> Fácil</span>
+              <span><i class="fas fa-user-friends"></i> 15 personas</span>
+            </div>
+            <a href="manzana.html" class="recipe-button">Ver Receta</a>
+          </div>
+        </article>
+        
+        <article class="recipe-card">
+          <div class="recipe-image">
+            <img src="imagenes/arrozito.jpg" alt="Arroz Con Leche">
+            <span class="recipe-badge saludable">Dulce</span>
+          </div>
+          <div class="recipe-content">
+            <h3>Arroz con Leche</h3>
+            <p>Aprende a preparar arroz con leche, postre facil y delisioso para todos los gustos.</p>
+            <div class="recipe-meta">
+              <span><i class="far fa-clock"></i> 1 hora</span>
+              <span><i class="fas fa-signal"></i> Facil</span>
+              <span><i class="fas fa-user-friends"></i> 8 personas</span>
+            </div>
+            <a href="arroz.html" class="recipe-button">Ver Receta</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- CATEGORÍAS -->
+    <section id="categorias" class="categories">
+      <h2>Categorías</h2>
+      <div class="categories-container">
+        <div class="category">
+          <i class="fas fa-utensils"></i>
+          <h3>Postres</h3>
+          <span class="count">(3)</span>
+        </div>
+        <div class="category">
+          <i class="fas fa-bread-slice"></i>
+          <h3>Panadería</h3>
+          <span class="count">(0)</span>
+        </div>
+        <div class="category">
+          <i class="fas fa-ice-cream"></i>
+          <h3>Helados</h3>
+          <span class="count">(0)</span>
+        </div>
+        <div class="category">
+          <i class="fas fa-home"></i>
+          <h3>Caseros</h3>
+          <span class="count">(0)</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOBRE MÍ -->
+    <section id="sobre-mi" class="about">
+      <div class="about-container">
+        <div class="about-text">
+          <h2>Sobre Mí</h2>
+          <p>¡Hola! Mi nombre es Perla, y soy una gran fanatica de los postres,
+             aunque he de admitir que no soy gran fanatica de lo dulce, la serie
+              de postres que presento en este vlog, con mis favoritos, ya que mi 
+              abuelita me mostro como preparlos, pero he de admitir tambien que buana 
+              cocinera no soy, sim embargo quien tiene buena mano, es mi tia, y siempre 
+              que los prepara soy la primera en querer un poco.</p>
+          <div class="social-links">
+            <a href="https://www.instagram.com/esml_priv/" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+            <a href="https://www.facebook.com/Pearl.Wastt?locale=es_LA" target="_blank"><i class="fab fa-facebook"></i> Facebook</a>
+          </div>
+        </div>
+        <div class="about-image">
+          <img src="imagenes/yop.jpg" alt="Perla en la cocina">
+        </div>
+      </div>
+    </section>
+
+    <!-- NEWSLETTER -->
+    <section class="newsletter">
+      <div class="newsletter-content">
+        <h2><i class="fas fa-envelope"></i> Suscríbete al Newsletter</h2>
+        <p>Recibe nuevas recetas cada semana</p>
+        <form class="newsletter-form">
+          <input type="email" placeholder="Tu email aquí..." required>
+          <button type="submit" class="btn">Suscribirme</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer id="contacto" class="footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3><i class="fas fa-utensils"></i> Mi Blog Culinario</h3>
+        <p>Compartiendo recetas desde 2025</p>
+      </div>
+      
+      
+      <div class="footer-section">
+        <h4>Contacto</h4>
+        <p><i class="fas fa-envelope"></i>BlogWastaken@gmail.com</p>
+        <p><i class="fas fa-phone"></i> +52 722 552 1408</p>
+        <p><i class="fas fa-map-marker-alt"></i> Zinacantepec, Estado de Mexico</p>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>&copy; 2025 Mi Blog Culinario. Creado por Perla E.E.L.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Función para cambiar entre modo oscuro y claro
+    const themeToggle = document.getElementById('themeToggle');
+    const themeIcon = themeToggle.querySelector('i');
+    
+    // Verificar si hay una preferencia guardada
+    const currentTheme = localStorage.getItem('theme') || 'light';
+    document.documentElement.setAttribute('data-theme', currentTheme);
+    
+    // Actualizar el icono según el tema actual
+    updateThemeIcon(currentTheme);
+    
+    // Agregar evento al botón
+    themeToggle.addEventListener('click', () => {
+      const currentTheme = document.documentElement.getAttribute('data-theme');
+      const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+      
+      document.documentElement.setAttribute('data-theme', newTheme);
+      localStorage.setItem('theme', newTheme);
+      
+      updateThemeIcon(newTheme);
+    });
+    
+    function updateThemeIcon(theme) {
+      if (theme === 'dark') {
+        themeIcon.classList.remove('fa-moon');
+        themeIcon.classList.add('fa-sun');
+      } else {
+        themeIcon.classList.remove('fa-sun');
+        themeIcon.classList.add('fa-moon');
+      }
+    }
+
+    // Función para el menú hamburguesa
+    const hamburgerMenu = document.getElementById('hamburgerMenu');
+    const menuList = document.getElementById('menuList');
+    
+    hamburgerMenu.addEventListener('click', () => {
+      menuList.classList.toggle('active');
+      hamburgerMenu.classList.toggle('active');
+    });
+
+    // Cerrar menú al hacer clic en un enlace
+    const menuItems = document.querySelectorAll('.menu-item');
+    menuItems.forEach(item => {
+      item.addEventListener('click', () => {
+        menuList.classList.remove('active');
+        hamburgerMenu.classList.remove('active');
+      });
+    });
+
+    // Cerrar menú al hacer clic fuera de él
+    document.addEventListener('click', (e) => {
+      if (!hamburgerMenu.contains(e.target) && !menuList.contains(e.target)) {
+        menuList.classList.remove('active');
+        hamburgerMenu.classList.remove('active');
+      }
+    });
+  </script>
+</body>
+</html>

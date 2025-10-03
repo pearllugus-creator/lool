@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="flan.css">
+        <meta charset="utf-8">
+        </head>
+    <body>
+         <header>
+            <div class="encabezado">
+            <div class="logo">
+            <h1 style="font-size: 2.5rem;"> 👩‍🍳Mi Blog Culinario🍳 </h1>
+            <p>Recetas caseras con amor</p>
+                </div>
+                    <nav class="navegacion">
+                       <button class="hamburger" id="hamburgerMenu" aria-label="Abrir menú">
+                      <span></span>
+                      <span></span>
+                      <span></span>
+                      </button>
+                         <ul class="menu-list">
+                            <li><a href="index.html" class="menu-item">Inicio</a></li>
+                            <li><a href="index.html#recetas" class="menu-item">Recetas</a></li>
+                            <li><a href="index.html#categorias" class="menu-item">Categorías</a></li>
+                            <li><a href="index.html#sobre-mi" class="menu-item">Sobre Mí</a></li>
+                            <li><a href="index.html#contacto" class="menu-item">Contacto</a></li>
+                        </ul>
+                    <button class="theme-toggle" id="themeToggle" aria-label="Cambiar modo oscuro/claro">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    </nav>
+                </div>
+        </header>
+        <main class="main">
+            <section class="seccion1">
+                <h3 class="titulo">INGREDIENTES</h3>
+                    <article class="articulo1">
+                       <ul>
+                        <li>3/4 De taza de azúcar refinada</li>
+                       <li>1 Lata de Leche Condensada LA LECHERA®</li>
+                        <li>1 Lata de Leche Evaporada CARNATION® CLAVEL®</li>
+                        <li>1 Paquete de queso crema a temperatura ambiente (190 g)</li>
+                        <li>5 Huevos</li>
+                        <li>1 Cucharada de esencia de vainilla</li>
+                       </ul>
+                    </article>
+
+                <h3 class="titulo">MODO DE PREPARACION</h3>
+                    <article class="articulo1">
+                        <em><strong>Calienta</strong></em>
+                            1.Horno precalentado a 180 °C.
+                            2.Vierte el azúcar en una flanera y calienta a fuego medio para que se 
+                            forme el caramelo; ladea con cuidado el molde para cubrir la superficie
+                             y las paredes.
+                             <br>
+                        <em><strong>Cocina</strong></em>
+                            3.Licúa la Leche Condensada LA LECHERA® con la Leche Evaporada CARNATION®
+                             CLAVEL®, el queso crema, los huevos y la esencia de vainilla. Vierte la 
+                             preparación en la flanera y tapa con papel aluminio sellando las orillas.
+                              Coloca en un recipiente y cocina a baño María en el horno a 180 °C durante 
+                              1 1/2 horas.
+                              <br>
+                        <em><strong>Sirve</strong></em>
+                            4.Retira del fuego y deja enfriar por completo; desmolda y sirve.
+                    </article>
+                    <article class="articulo2">
+                        <img class="gif" src="imagenes/flancito.gif" alt="Flan Napolitano">
+                    </article>
+                
+            </section>
+        </main>
+   <!-- FOOTER -->
+  <footer id="contacto" class="footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3><i class="fas fa-utensils"></i> Mi Blog Culinario</h3>
+        <p>Compartiendo recetas desde 2025</p>
+      </div>
+      
+      
+      <div class="footer-section">
+        <h4>Contacto</h4>
+        <p><i class="fas fa-envelope"></i>BlogWastaken@gmail.com</p>
+        <p><i class="fas fa-phone"></i> +52 722 552 1408</p>
+        <p><i class="fas fa-map-marker-alt"></i> Zinacantepec, Estado de Mexico</p>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>&copy; 2025 Mi Blog Culinario. Creado por Perla E.E.L.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Función para cambiar entre modo oscuro y claro
+    const themeToggle = document.getElementById('themeToggle');
+    const themeIcon = themeToggle.querySelector('i');
+    
+    // Verificar si hay una preferencia guardada
+    const currentTheme = localStorage.getItem('theme') || 'light';
+    document.documentElement.setAttribute('data-theme', currentTheme);
+    
+    // Actualizar el icono según el tema actual
+    updateThemeIcon(currentTheme);
+    
+    // Agregar evento al botón
+    themeToggle.addEventListener('click', () => {
+      const currentTheme = document.documentElement.getAttribute('data-theme');
+      const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+      
+      document.documentElement.setAttribute('data-theme', newTheme);
+      localStorage.setItem('theme', newTheme);
+      
+      updateThemeIcon(newTheme);
+    });
+    
+    function updateThemeIcon(theme) {
+      if (theme === 'dark') {
+        themeIcon.classList.remove('fa-moon');
+        themeIcon.classList.add('fa-sun');
+      } else {
+        themeIcon.classList.remove('fa-sun');
+        themeIcon.classList.add('fa-moon');
+      }
+    }
+  // Función para el menú hamburguesa
+    const hamburgerMenu = document.getElementById('hamburgerMenu');
+    const menuList = document.getElementById('menuList');
+    
+    hamburgerMenu.addEventListener('click', () => {
+      menuList.classList.toggle('active');
+      hamburgerMenu.classList.toggle('active');
+    });
+
+    // Cerrar menú al hacer clic en un enlace
+    const menuItems = document.querySelectorAll('.menu-item');
+    menuItems.forEach(item => {
+      item.addEventListener('click', () => {
+        menuList.classList.remove('active');
+        hamburgerMenu.classList.remove('active');
+      });
+    });
+
+    // Cerrar menú al hacer clic fuera de él
+    document.addEventListener('click', (e) => {
+      if (!hamburgerMenu.contains(e.target) && !menuList.contains(e.target)) {
+        menuList.classList.remove('active');
+        hamburgerMenu.classList.remove('active');
+      }
+    });
+  </script>
+</body>
+</html> 
