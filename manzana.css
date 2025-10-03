@@ -23,18 +23,40 @@
   --sombra: 0 4px 6px rgba(0, 0, 0, 0.3);
   --sombra-hover: 0 10px 20px rgba(0, 0, 0, 0.4);
 }
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body {
-  background: #ced7dd;
-  font-family: Arial, Helvetica, sans-serif;
+html {
+  scroll-behavior: smooth;
 }
 
-/* Encabezado */
+body {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6;
+  color: var(--gris-oscuro);
+  background-color: var(--gris-claro);
+  transition: var(--transicion);
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+}
+
+/* ====== HEADER ====== */
+header {
+  background-color: var(--blanco);
+  box-shadow: var(--sombra);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transition: var(--transicion);
+}
+
 .encabezado {
   display: flex;
   justify-content: space-between;
@@ -46,13 +68,13 @@ body {
 
 .logo h1 {
   font-size: 1.8rem;
-  color: black;
+  color: var(--gris-oscuro);
   margin-bottom: 0.2rem;
 }
 
 .logo p {
   font-size: 0.9rem;
-  color: white;
+  color: var(--gris-oscuro);
 }
 
 .navegacion {
@@ -119,29 +141,7 @@ body {
 [data-theme="dark"] .theme-toggle:hover {
   background-color: rgba(255, 255, 255, 0.1);
 }
-/* Menú */
-.menu {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  padding: 1rem;
-  background-color: #474945;
-  justify-content: center;
-}
 
-.menu a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-  font-family: Arial, Helvetica, sans-serif;
-  transition: all 0.3s ease;
-}
-
-.soso:hover {
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-  transform: translateY(-3px);
-  font-size: 1.2rem;
-}
 /* ====== MENÚ HAMBURGUESA ====== */
 .hamburger {
   display: none;
@@ -173,28 +173,31 @@ body {
 .hamburger.active span:nth-child(3) {
   transform: rotate(-45deg) translate(6px, -6px);
 }
+
 /* Contenido principal */
 .main {
   display: flex;
   flex-direction: column;
   width: 100%;
-  background-color: #afc0a8;
+  background-color: var(--blanco);
   padding: 1rem;
+  transition: var(--transicion);
 }
 
 /* Sección */
 .seccion1 {
   width: 100%;
-  background-color: rgb(91, 99, 99);
+  background-color: var(--rojo-tomate);
   padding: 1rem;
   border-radius: 6px;
   margin-bottom: 1rem;
+  transition: var(--transicion);
 }
 
 .titulo {
   font-size: 1.8rem;
   font-family: 'Times New Roman', Times, serif;
-  color: aliceblue;
+  color: var(--blanco);
   text-align: center;
 }
 
@@ -204,12 +207,14 @@ body {
   width: 100%;
   max-width: 1200px;
   margin: 1rem auto;
-  background: #dae9d0;
+  background: var(--gris-claro);
   font-size: 1rem;
   text-align: justify;
   padding: 1rem;
   border-radius: 6px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--sombra);
+  color: var(--gris-oscuro);
+  transition: var(--transicion);
 }
 
 .articulo2 {
@@ -223,10 +228,11 @@ body {
   height: 50vh;
   border-radius: 6px;
 }
+
 /* ====== FOOTER ====== */
 .footer {
-  background: rgb(112, 112, 112);
-  color: rgb(255, 255, 255);
+  background: var(--gris-oscuro);
+  color: var(--blanco);
   padding: 3rem 2rem 1rem;
   transition: var(--transicion);
 }
@@ -271,10 +277,67 @@ body {
   font-size: 0.9rem;
 }
 
+/* ====== RESPONSIVE DESIGN ====== */
+@media (max-width: 1024px) {
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+}
 
-/* Media Queries */
 @media (max-width: 768px) {
-  .logo {
+  .encabezado {
+    flex-direction: column;
+    padding: 1rem;
+  }
+  
+  .navegacion {
+    margin-top: 1rem;
+    gap: 1rem;
+    width: 100%;
+    justify-content: space-between;
+  }
+  
+  .navegacion ul {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: var(--blanco);
+    box-shadow: var(--sombra);
+    padding: 1rem;
+    gap: 0;
+    z-index: 1000;
+  }
+  
+  .navegacion ul.active {
+    display: flex;
+  }
+  
+  .navegacion ul li {
+    width: 100%;
+  }
+  
+  .menu-item {
+    display: block;
+    padding: 1rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  
+  [data-theme="dark"] .menu-item {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .menu-item:last-child {
+    border-bottom: none;
+  }
+  
+  .hamburger {
+    display: flex;
+  }
+  
+  .logo h1 {
     font-size: 1.5rem;
   }
 
@@ -294,14 +357,8 @@ body {
 }
 
 @media (max-width: 480px) {
-  .logo {
+  .logo h1 {
     font-size: 1.2rem;
-    padding: 0.5rem;
-  }
-
-  .menu {
-    flex-direction: column;
-    align-items: center;
   }
 
   .titulo {
@@ -310,5 +367,9 @@ body {
 
   .gif {
     max-width: 100%;
+  }
+  
+  .encabezado {
+    padding: 0.5rem;
   }
 }
