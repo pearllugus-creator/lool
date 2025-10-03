@@ -1,160 +1,166 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="arroz.css">
-        <meta charset="utf-8">
-        </head>
-    <body>
-         <header>
-            <div class="encabezado">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ensalada de Manzana - Mi Blog Culinario</title>
+    <link rel="stylesheet" href="manzana.css">
+    <!-- Font Awesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="encabezado">
             <div class="logo">
-            <h1 style="font-size: 2.5rem;"> 👩‍🍳Mi Blog Culinario🍳 </h1>
-            <p>Recetas caseras con amor</p>
-                </div>
-                    <nav class="navegacion">
-                       <button class="hamburger" id="hamburgerMenu" aria-label="Abrir menú">
-                      <span></span>
-                      <span></span>
-                      <span></span>
-                      </button>
-                         <ul class="menu-list">
-                            <li><a href="index.html" class="menu-item">Inicio</a></li>
-                            <li><a href="index.html#recetas" class="menu-item">Recetas</a></li>
-                            <li><a href="index.html#categorias" class="menu-item">Categorías</a></li>
-                            <li><a href="index.html#sobre-mi" class="menu-item">Sobre Mí</a></li>
-                            <li><a href="index.html#contacto" class="menu-item">Contacto</a></li>
-                        </ul>
-                    <button class="theme-toggle" id="themeToggle" aria-label="Cambiar modo oscuro/claro">
-                        <i class="fas fa-moon"></i>
-                    </button>
-                    </nav>
-                </div>
-        </header>
-        <main class="main">
-            <section class="seccion1">
-                <h3 class="titulo">INGREDIENTES</h3>
-                    <article class="articulo1">
-                       <ul>
-                        <li>3 tazas manzanas gala cortadas en cubitos puedes pelarlas o no, 
-                            según tus preferencias</li>
-                       <li>3/4 taza de piña triturada enlatada o fresca (escurrida)</li>
-                        <li>1 taza de uvas verdes cortadas por la mitad</li>
-                        <li>½ taza de nueces picadas</li>
-                        <li>Crema de almendras dulces:</li>
-                        <li>½ taza de almendras crudas</li>
-                        <li>¼ de taza de agua</li>
-                        <li>¼ taza leche de almendras sin azúcar</li>
-                        <li>1 cdita de Jugo de limón fresco</li>
-                        <li>1 cdita de miel de maple</li>
-                       </ul>
-                    </article>
+                <h1 style="font-size: 2.5rem;"> 👩‍🍳Mi Blog Culinario🍳 </h1>
+                <p>Recetas caseras con amor</p>
+            </div>
+            <nav class="navegacion">
+                <button class="hamburger" id="hamburgerMenu" aria-label="Abrir menú">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="menu-list" id="menuList">
+                    <li><a href="index.html" class="menu-item">Inicio</a></li>
+                    <li><a href="index.html#recetas" class="menu-item">Recetas</a></li>
+                    <li><a href="index.html#categorias" class="menu-item">Categorías</a></li>
+                    <li><a href="index.html#sobre-mi" class="menu-item">Sobre Mí</a></li>
+                    <li><a href="index.html#contacto" class="menu-item">Contacto</a></li>
+                </ul>
+                <button class="theme-toggle" id="themeToggle" aria-label="Cambiar modo oscuro/claro">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+    
+    <main class="main">
+        <section class="seccion1">
+            <h3 class="titulo">INGREDIENTES</h3>
+            <article class="articulo1">
+                <ul>
+                    <li>3 tazas manzanas gala cortadas en cubitos puedes pelarlas o no, 
+                        según tus preferencias</li>
+                    <li>3/4 taza de piña triturada enlatada o fresca (escurrida)</li>
+                    <li>1 taza de uvas verdes cortadas por la mitad</li>
+                    <li>½ taza de nueces picadas</li>
+                    <li>Crema de almendras dulces:</li>
+                    <li>½ taza de almendras crudas</li>
+                    <li>¼ de taza de agua</li>
+                    <li>¼ taza leche de almendras sin azúcar</li>
+                    <li>1 cdita de Jugo de limón fresco</li>
+                    <li>1 cdita de miel de maple</li>
+                </ul>
+            </article>
 
-                <h3 class="titulo">MODO DE PREPARACION</h3>
-                    <article class="articulo1">
-                        <em><strong>Cocina</strong></em>
-                            <ul>
-                                <li>Pon a hervir 1 litro de agua en una cacerola pequeña y
-                                     vierte sobre las almendras. Deja en remojo durante la noche.</li>
-                                <li>Al día siguiente, pela las almendras presionando una almendra entre
-                                     el pulgar y el índice y presionando ligeramente. La piel debería 
-                                     salirse.</li>
-                                <li>En una licuadora, coloca las almendras, la leche de éstas, el jugo 
-                                    de limón y el jarabe de arce y mezcla a alta velocidad hasta que 
-                                    esté completamente suave y cremosa (para obtener una salsa súper 
-                                    suave, necesitarás una licuadora de alta potencia).</li>
-                                <li>Coloca la salsa en un recipiente pequeño y refrigera por 30 min.</li>
-                                <li>En un tazón grande combina las manzanas, la piña, las uvas y las nueces picadas. 
-                                    Vierte la salsa encima y mezcla bien.</li>      
-                            </ul>
-                              <br>
-                        <em><strong>Sirve</strong></em>
-                    </article>
-                    <article class="articulo2">
-                        <img class="gif" src="imagenes/manzanitaa.jpg" alt="Ensalada de Manzana" >
-                    </article>
-                
-            </section>
-        </main>
-   <!-- FOOTER -->
-  <footer id="contacto" class="footer">
-    <div class="footer-content">
-      <div class="footer-section">
-        <h3><i class="fas fa-utensils"></i> Mi Blog Culinario</h3>
-        <p>Compartiendo recetas desde 2025</p>
-      </div>
-      
-      
-      <div class="footer-section">
-        <h4>Contacto</h4>
-        <p><i class="fas fa-envelope"></i>BlogWastaken@gmail.com</p>
-        <p><i class="fas fa-phone"></i> +52 722 552 1408</p>
-        <p><i class="fas fa-map-marker-alt"></i> Zinacantepec, Estado de Mexico</p>
-      </div>
-    </div>
+            <h3 class="titulo">MODO DE PREPARACION</h3>
+            <article class="articulo1">
+                <em><strong>Cocina</strong></em>
+                <ul>
+                    <li>Pon a hervir 1 litro de agua en una cacerola pequeña y
+                         vierte sobre las almendras. Deja en remojo durante la noche.</li>
+                    <li>Al día siguiente, pela las almendras presionando una almendra entre
+                         el pulgar y el índice y presionando ligeramente. La piel debería 
+                         salirse.</li>
+                    <li>En una licuadora, coloca las almendras, la leche de éstas, el jugo 
+                        de limón y el jarabe de arce y mezcla a alta velocidad hasta que 
+                        esté completamente suave y cremosa (para obtener una salsa súper 
+                        suave, necesitarás una licuadora de alta potencia).</li>
+                    <li>Coloca la salsa en un recipiente pequeño y refrigera por 30 min.</li>
+                    <li>En un tazón grande combina las manzanas, la piña, las uvas y las nueces picadas. 
+                        Vierte la salsa encima y mezcla bien.</li>      
+                </ul>
+                <br>
+                <em><strong>Sirve</strong></em>
+                <p>Sirve la ensalada fría y disfruta de este delicioso postre.</p>
+            </article>
+            <article class="articulo2">
+                <img class="gif" src="imagenes/manzanitaa.jpg" alt="Ensalada de Manzana">
+            </article>
+        </section>
+    </main>
     
-    <div class="footer-bottom">
-      <p>&copy; 2025 Mi Blog Culinario. Creado por Perla E.E.L.</p>
-    </div>
-  </footer>
+    <!-- FOOTER -->
+    <footer id="contacto" class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3><i class="fas fa-utensils"></i> Mi Blog Culinario</h3>
+                <p>Compartiendo recetas desde 2025</p>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Contacto</h4>
+                <p><i class="fas fa-envelope"></i>BlogWastaken@gmail.com</p>
+                <p><i class="fas fa-phone"></i> +52 722 552 1408</p>
+                <p><i class="fas fa-map-marker-alt"></i> Zinacantepec, Estado de Mexico</p>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 Mi Blog Culinario. Creado por Perla E.E.L.</p>
+        </div>
+    </footer>
 
-  <script>
-    // Función para cambiar entre modo oscuro y claro
-    const themeToggle = document.getElementById('themeToggle');
-    const themeIcon = themeToggle.querySelector('i');
-    
-    // Verificar si hay una preferencia guardada
-    const currentTheme = localStorage.getItem('theme') || 'light';
-    document.documentElement.setAttribute('data-theme', currentTheme);
-    
-    // Actualizar el icono según el tema actual
-    updateThemeIcon(currentTheme);
-    
-    // Agregar evento al botón
-    themeToggle.addEventListener('click', () => {
-      const currentTheme = document.documentElement.getAttribute('data-theme');
-      const newTheme = currentTheme === 'light' ? 'dark' : 'light';
-      
-      document.documentElement.setAttribute('data-theme', newTheme);
-      localStorage.setItem('theme', newTheme);
-      
-      updateThemeIcon(newTheme);
-    });
-    
-    function updateThemeIcon(theme) {
-      if (theme === 'dark') {
-        themeIcon.classList.remove('fa-moon');
-        themeIcon.classList.add('fa-sun');
-      } else {
-        themeIcon.classList.remove('fa-sun');
-        themeIcon.classList.add('fa-moon');
-      }
-    }
-  // Función para el menú hamburguesa
-    const hamburgerMenu = document.getElementById('hamburgerMenu');
-    const menuList = document.getElementById('menuList');
-    
-    hamburgerMenu.addEventListener('click', () => {
-      menuList.classList.toggle('active');
-      hamburgerMenu.classList.toggle('active');
-    });
+    <script>
+        // Función para cambiar entre modo oscuro y claro
+        const themeToggle = document.getElementById('themeToggle');
+        const themeIcon = themeToggle.querySelector('i');
+        
+        // Verificar si hay una preferencia guardada
+        const currentTheme = localStorage.getItem('theme') || 'light';
+        document.documentElement.setAttribute('data-theme', currentTheme);
+        
+        // Actualizar el icono según el tema actual
+        updateThemeIcon(currentTheme);
+        
+        // Agregar evento al botón
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+            
+            document.documentElement.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            
+            updateThemeIcon(newTheme);
+        });
+        
+        function updateThemeIcon(theme) {
+            if (theme === 'dark') {
+                themeIcon.classList.remove('fa-moon');
+                themeIcon.classList.add('fa-sun');
+            } else {
+                themeIcon.classList.remove('fa-sun');
+                themeIcon.classList.add('fa-moon');
+            }
+        }
 
-    // Cerrar menú al hacer clic en un enlace
-    const menuItems = document.querySelectorAll('.menu-item');
-    menuItems.forEach(item => {
-      item.addEventListener('click', () => {
-        menuList.classList.remove('active');
-        hamburgerMenu.classList.remove('active');
-      });
-    });
+        // Función para el menú hamburguesa
+        const hamburgerMenu = document.getElementById('hamburgerMenu');
+        const menuList = document.getElementById('menuList');
+        
+        hamburgerMenu.addEventListener('click', (e) => {
+            e.stopPropagation();
+            menuList.classList.toggle('active');
+            hamburgerMenu.classList.toggle('active');
+        });
 
-    // Cerrar menú al hacer clic fuera de él
-    document.addEventListener('click', (e) => {
-      if (!hamburgerMenu.contains(e.target) && !menuList.contains(e.target)) {
-        menuList.classList.remove('active');
-        hamburgerMenu.classList.remove('active');
-      }
-    });
-  </script>
-</body> 
+        // Cerrar menú al hacer clic en un enlace
+        const menuItems = document.querySelectorAll('.menu-item');
+        menuItems.forEach(item => {
+            item.addEventListener('click', () => {
+                menuList.classList.remove('active');
+                hamburgerMenu.classList.remove('active');
+            });
+        });
+
+        // Cerrar menú al hacer clic fuera de él
+        document.addEventListener('click', (e) => {
+            if (!hamburgerMenu.contains(e.target) && !menuList.contains(e.target)) {
+                menuList.classList.remove('active');
+                hamburgerMenu.classList.remove('active');
+            }
+        });
+    </script>
+</body>
 </html>
